@@ -16,7 +16,7 @@
 -(UIImage*)cropToSize:(CGSize)newSize usingMode:(NYXCropMode)cropMode
 {
 	const CGSize size = self.size;
-	CGFloat x, y;
+	size_t x, y;
 	switch (cropMode)
 	{
 		case NYXCropModeTopLeft:
@@ -61,10 +61,10 @@
 
 	if (self.imageOrientation == UIImageOrientationLeft || self.imageOrientation == UIImageOrientationLeftMirrored || self.imageOrientation == UIImageOrientationRight || self.imageOrientation == UIImageOrientationRightMirrored)
 	{
-		CGFloat temp = x;
+		size_t temp = x;
 		x = y;
 		y = temp;
-        
+
         temp = newSize.width;
         newSize.width = newSize.height;
         newSize.height = temp;
