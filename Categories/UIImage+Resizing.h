@@ -11,7 +11,7 @@
 #import "NYXImagesHelper.h"
 
 
-typedef enum
+typedef NS_ENUM(NSInteger, NYXCropMode)
 {
 	NYXCropModeTopLeft,
 	NYXCropModeTopCenter,
@@ -22,14 +22,14 @@ typedef enum
 	NYXCropModeLeftCenter,
 	NYXCropModeRightCenter,
 	NYXCropModeCenter
-} NYXCropMode;
+};
 
-typedef enum
+typedef NS_ENUM(NSInteger, NYXResizeMode)
 {
 	NYXResizeModeScaleToFill,
 	NYXResizeModeAspectFit,
 	NYXResizeModeAspectFill
-} NYXResizeMode;
+};
 
 
 @interface UIImage (NYX_Resizing)
